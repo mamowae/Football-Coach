@@ -138,13 +138,48 @@
   <h3 onclick="toggleNews(this)">🚨عودة أوباميانج الى فرنسا</h3>
   <p class="news-details" style="display: none;">
  صفقة رسمية: نادي مارسيليا يعلن تعاقده مع الجابوني بيير-إيميريك أوباميانج في صفقة انتقال حر.  </p>
+  <style>
+  .news-item {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-right: 5px solid #0077b6;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.news-item:hover {
+  background-color: #f0f8ff;
+}
+
+.news-item h3 {
+  margin: 0;
+  color: #003366;
+}
+
+.news-details {
+  display: none;
+  padding-top: 10px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.news-item.active .news-details {
+  display: block;
+}
+
+ </style>
 </div>
 
 <script>
-  function toggleNews(titleElement) {
-    const details = titleElement.nextElementSibling;
-    details.style.display = (details.style.display === "none") ? "block" : "none";
-  }
+  function toggleNews(element) {
+  element.classList.toggle('active');
+}
+
 </script>  <h3 onclick="toggleNews(this)">🚨 كواليس أزمة (زيزو) مع جماهير القلعة البيضاء</h3>
   <p class="news-details" style="display: none;"> فأبلغ اللاعب عبد الله السعيد لاعب نادى الزمالك عن هذا لادارة الفندق و تم حل المشكلة و غادرت البعثة الى الاستاد استعدادا لمواجهة غزل المحلة 
 عندما دخل نادى الزماللك فندق الاقامة و كان هناك زفاف فعندما دخل بعثة نادى الزمالك هتف بعض جماهير النادى الأهلى ب"اوليه اوليه زيزو زيزو"  </p>
@@ -160,4 +195,5 @@
 
 </body>
 </html>
+
 
